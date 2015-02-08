@@ -14,7 +14,7 @@
 
 \setcounter{tocdepth}{2}
 
-\title{Homework 3}
+\title{Requirements Document}
 \subtitle{CS 383 - Team \texttt{\textasciicircum teamname}}
 \author{
 Mason Fabel - \textit{fabe0940@vandals.uidaho.edu} \\
@@ -32,30 +32,48 @@ Mason Fabel - \textit{fabe0940@vandals.uidaho.edu} \\
 Document Typsetting and Editing: \textbf{Mason Fabel}
 \clearpage
 
-% TODO: Write requirements in the appropriate section.
-%   Go ahead and copy from the format I've put in,
-%   or use your own if you have something better.
-%   Just make sure there's something linking your name
-%   to your work.
-
 \chapter{Functional Requirements}
 
 \begin{section}{Mason Fabel}
-\begin{subsection}{First Requirement}
-Paragraphs and words go here.
-
-Leave a blank line between each paragraph.
+\begin{subsection}{Startup}
+Upon being launched, the game will present the player with a simple menu
+consisting of three items: ``New Game'', ``Load Game'', and ``Join Game''.
+If one of the first two items is selected, the player's hostname and IP
+address will be reported so that other players can potentially join the
+game. A thread will then begin listening for joins at port 4500 by default,
+or another port if the player has previuously configured the game to run
+over an alternative port.
 \end{subsection}
 
-\begin{subsection}{Second Requirement}
-\end{subsection}
-
-\begin{subsection}{Third Requirement}
+\begin{subsection}{Drop In and Drop Out Multiplayer}
+The game will always be accepting connections from other players at the
+specified port. Other players will be able to join a game at any time, and
+be quickly and seamlessly integrating into ongoing gameplay. Furthermore,
+connected players will be able to leave the game at almost any time without
+disrupting their fellow players.
 \end{subsection}
 \end{section}
 
 \chapter{Nonfunctional Requirements}
 
 \chapter{Rejected Requirements}
+
+\begin{section}{Mason Fabel}
+\begin{subsection}{Threading}
+It was originally proposed that the system will view each player as a
+thread, allowing those threads to send and recieve messages from a
+controller thread which manages the game state. This requirement has been
+rejected for being too specific. While this is a good solution to the
+general gameplay requirements, we believe it is better to keep this as a
+suggestion rather than a requirement.
+\end{subsection}
+
+\begin{subsection}{3D Graphics}
+It was mentioned that expanding this project to include 3D graphics might
+be a future posibility. We believe that designing this project in such a
+way to intentionally leave this path open is a distraction from the main
+purpose of the game, and thus this should not be a requirement.
+\end{subsection}
+\end{section}
 
 \end{document}

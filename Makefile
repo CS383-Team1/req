@@ -1,11 +1,15 @@
 LATEXCC=pdflatex
-PDFS=srs.pdf
+PDFS=srs.pdf srs-alt.pdf
 
 .PHONY : all clean rebuild
 
 all : pdf
 
 pdf : $(PDFS)
+
+main : srs.pdf
+
+alt : srs-alt.pdf
 
 %.pdf : %.tex %.toc
 	$(LATEXCC) $^

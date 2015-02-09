@@ -1,0 +1,116 @@
+\documentclass[12pt]{report}
+\usepackage{titling}
+
+\title{Specification Report - HW3, team \&teamname}
+\author{
+Casey Blair - \textit{blai1919@vandals.uidaho.edu} \\
+\and Mason Fabel - \textit{fabe0940@vandals.uidaho.edu} \\
+\and Tessa Saul - \textit{saul7812@vandals.uidaho.edu} \\
+\and Lance Wells - \textit{well3112@vandals.uidaho.edu} \\
+% TODO: Add your own name/email here
+}
+
+\begin{document}
+\maketitle
+
+\chapter{Requirement Specification}
+\section{Functional Requirements}
+\begin{itemize}
+	\item \textbf{Startup}
+	
+	On startup: system asks if you want (a) new game, (b) load game, (c)
+	join game. If (a) or (b), system reports domainname/IP to you to give
+	out, if you wish, to other players to join you. Starts up listening at
+	port 4500 (default) or configurable port.
+	
+	\item \textbf{Drop-in Multiplayer}
+	
+	 Drop-in drop-out multiplayer functionality
+\end{itemize}
+
+\section{Functional Requirements}
+\begin{itemize}
+	\item \textbf{Single/Multi-player}
+	
+	Plays standalone or multiplayer, scaling up to 27 players
+	
+	\item \textbf{Server Functionality}
+	
+	Peer-to-peer connection to a "server" thread allows remote player
+	interaction with the application via a proxy thread
+	
+	\item \textbf{Dungeon Naming}
+	
+	Note that the term "dungeon" should be replaced by "site", "facility",
+	"campus" or some such likeness.
+	
+	\item \textbf{Level Editor}
+	
+	Use whatever internal data structure(s) your software design calls
+	for, but the external file format of levels is: ASCII-art text; i.e.
+	Emacs or Vi can be your level editor.
+	
+	\item \textbf{Setting 1}
+	
+	Setting: the game starts at the Spaceport America, a 28 square mile
+	complex located in the Jornada del Muerto region in New Mexico, the
+	center of modern commercial space travel. See its Map. Your levels may
+	start with approximations of the major buildings, starting with the more
+	office/administrative buildings and working towards the space operations
+	buildings.
+	
+	\item \textbf{Setting 2}
+	
+	Levels 1..k are relatively ordinary "office" training levels. There is
+	no death in the initial levels; the emphasis is on social standing,
+	promotion, bureaucracy, verbal jousting, maybe the occasional photobomb,
+	copy machine prank, toner theft, etc. See the Wikipedia article on
+	verbal self defense. NPC friends that you make here, if you gain enough
+	faction with them, will follow and aid you semi-autonomously. Interface
+	is text/ASCII-art, roguelike. 
+	
+	\item \textbf{Setting 3}
+	
+	Levels k+1..m are "cyber" levels, with death=dumped out of cyberspace.
+	Tron-like. Emphasis is on knowledge discovery, resouce acquisition,
+	virus combat. Interface is tile-based, 2D graphical, nethacklike.
+	Real-time until you hit "engagements" by entering enemy
+	zones-of-control; then turn-based.
+	
+	\item \textbf{Setting 4}
+	
+	Levels m+1..n are "space station" levels, with death=game over.
+	Emphasis is on combat with alien weapons and/or computer cyberattacks.
+	Interface is tile-based, enhanced (or 2.5D?) graphical. 
+\end{itemize}
+
+\section{Rejected Requirements}
+	\begin{itemize}
+		\item \textbf{Player Threads}
+		
+		System views each player as a thread, thread sends/receives messages
+		to a "controller" thread that manipulates game state.
+		
+		It was originally proposed that the system will view each player as a
+		thread, allowing those threads to send and receive messages from a
+		controller thread which manages the game state. This requirement has been
+		rejected for being too specific. While this is a good solution to the
+		general gameplay requirements, we believe it is better to keep this as a
+		suggestion rather than a requirement.
+		
+		\emph{Description by Mason Fabel}
+		
+		\item \textbf{3-D Gameplay}
+		
+		We said tile-based, not 3D FPS. If you want to do 3D in 480/481 or
+		428, knock the 2D version out of the park 
+		
+		It was mentioned that expanding this project to include 3D graphics might
+		be a future possibility. We believe that designing this project in such a
+		way to intentionally leave this path open is a distraction from the main
+		purpose of the game, and thus this should not be a requirement.
+		
+		\emph{Description by Mason Fabel}
+		
+	\end{itemize}
+\end{document}

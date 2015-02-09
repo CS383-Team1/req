@@ -1,20 +1,33 @@
-\documentclass[12pt]{report}
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\usepackage{graphicx}
 \usepackage{titling}
 
-\title{Specification Report - HW3, team \&teamname}
+\newcommand{\subtitle}[1]{
+        \posttitle{
+                \par\end{center}
+                \begin{center}\large#1\end{center}
+                \vskip0.5em}
+}
+
+\geometry{margin=1in}
+
+\setcounter{tocdepth}{2}
+
+\title{Requirements Document}
+\subtitle{CS 383 - Team \texttt{\textasciicircum teamname}}
 \author{
 Casey Blair - \textit{blai1919@vandals.uidaho.edu} \\
 \and Mason Fabel - \textit{fabe0940@vandals.uidaho.edu} \\
+\and Ronald Rodriguez - \textit{rodr3849@vandals.uidaho.edu} \\
 \and Tessa Saul - \textit{saul7812@vandals.uidaho.edu} \\
 \and Lance Wells - \textit{well3112@vandals.uidaho.edu} \\
-\and Ronald Rodriguez - \textit{rodr3849@vandals.uidaho.edu} \\
 % TODO: Add your own name/email here
 }
 
 \begin{document}
 \maketitle
 
-\chapter{Requirement Specification}
 \section{Functional Requirements}
 \begin{itemize}
 	\item \textbf{Startup}

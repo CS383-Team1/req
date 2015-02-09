@@ -85,32 +85,32 @@ Casey Blair - \textit{blai1919@vandals.uidaho.edu} \\
 \end{itemize}
 
 \section{Rejected Requirements}
-	\begin{itemize}
-		\item \textbf{Player Threads}
+\begin{itemize}
+	\item \textbf{Player Threads}
+	
+	System views each player as a thread, thread sends/receives messages
+	to a "controller" thread that manipulates game state.
+	
+	It was originally proposed that the system will view each player as a
+	thread, allowing those threads to send and receive messages from a
+	controller thread which manages the game state. This requirement has been
+	rejected for being too specific. While this is a good solution to the
+	general gameplay requirements, we believe it is better to keep this as a
+	suggestion rather than a requirement.
+	
+	\emph{Description by Mason Fabel}
 		
-		System views each player as a thread, thread sends/receives messages
-		to a "controller" thread that manipulates game state.
-		
-		It was originally proposed that the system will view each player as a
-		thread, allowing those threads to send and receive messages from a
-		controller thread which manages the game state. This requirement has been
-		rejected for being too specific. While this is a good solution to the
-		general gameplay requirements, we believe it is better to keep this as a
-		suggestion rather than a requirement.
-		
-		\emph{Description by Mason Fabel}
-		
-		\item \textbf{3-D Gameplay}
-		
-		We said tile-based, not 3D FPS. If you want to do 3D in 480/481 or
-		428, knock the 2D version out of the park 
-		
-		It was mentioned that expanding this project to include 3D graphics might
-		be a future possibility. We believe that designing this project in such a
-		way to intentionally leave this path open is a distraction from the main
-		purpose of the game, and thus this should not be a requirement.
-		
-		\emph{Description by Mason Fabel}
-		
-	\end{itemize}
+	\item \textbf{3-D Gameplay}
+	
+	We said tile-based, not 3D FPS. If you want to do 3D in 480/481 or
+	428, knock the 2D version out of the park 
+	
+	It was mentioned that expanding this project to include 3D graphics might
+	be a future possibility. We believe that designing this project in such a
+	way to intentionally leave this path open is a distraction from the main
+	purpose of the game, and thus this should not be a requirement.
+	
+	\emph{Description by Mason Fabel}
+	
+\end{itemize}
 \end{document}
